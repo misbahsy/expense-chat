@@ -1,6 +1,6 @@
 # Expense Chat
 
-This is an [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). Expense Chat allows you to upload and analyze your expense documents seamlessly, integrating with powerful APIs to provide insightful discussions.
+This is a project that leverages the power of Langflow API to analyze and discuss expense documents. Expense Chat allows you to upload and analyze your expense documents seamlessly, integrating with Langflow API to provide insightful discussions.
 
 ## Getting Started
 
@@ -12,13 +12,14 @@ Follow these steps to set up and run the project locally.
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 - [Langflow API Key](https://astra.datastax.com/) from Astra Datastax, free to use
 - [OpenAI API Key](https://openai.com)
+- [Zerox](https://github.com/getomni-ai/zerox) installation
 
 ### Installation
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/expense-chat.git
+   git clone https://github.com/misbahsy/expense-chat.git
    cd expense-chat
    ```
 
@@ -104,16 +105,11 @@ npm start
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Langflow, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - An interactive Next.js tutorial.
+- [Langflow Documentation](https://docs.langflow.org/) - Learn about Langflow features and API.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+You can check out [the Langflow GitHub repository](https://github.com/langflow-ai/langflow) - your feedback and contributions are welcome!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-```
