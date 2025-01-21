@@ -1,6 +1,6 @@
-# Expense Chat
+# Expense Agent
 
-This is a project that leverages the power of Langflow API to analyze and discuss expense documents. Expense Chat allows you to upload and analyze your expense documents seamlessly, integrating with Langflow API to provide insightful discussions.
+This is a project that leverages the power of Langflow API to analyze and discuss expense documents. Expense Agent allows you to upload and analyze your expense documents seamlessly, integrating with Langflow API to provide insightful discussions.
 
 ## Getting Started
 
