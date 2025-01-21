@@ -3,19 +3,71 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-start: #e6ffec;  /* Light mint green */
+  --background-end: #f0fff4;    /* Even lighter mint green */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--background-start), var(--background-end));
+  font-family: "Söhne", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Helvetica Neue";
+}
+
+.chat-container {
+  @apply max-w-3xl mx-auto;
+}
+
+.document-item {
+  @apply flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 transition-colors;
+}
+
+.document-item:hover .document-actions {
+  @apply opacity-100;
+}
+
+.document-actions {
+  @apply opacity-0 transition-opacity flex gap-2;
+}
+
+.btn {
+  @apply px-3 py-1.5 rounded text-sm font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply bg-black text-white hover:bg-gray-800;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 text-gray-700 hover:bg-gray-200;
+}
+
+.btn-danger {
+  @apply bg-red-50 text-red-700 hover:bg-red-100;
+}
+
+.input-field {
+  @apply w-full p-3 rounded-lg border border-gray-200 focus:border-black focus:ring-1 focus:ring-black transition-colors;
+}
+
+.prose {
+  @apply max-w-none;
+}
+
+.prose table {
+  @apply border-collapse border border-gray-200;
+}
+
+.prose td,
+.prose th {
+  @apply border border-gray-200 px-4 py-2;
+}
+
+.prose pre {
+  @apply bg-gray-50 rounded-lg p-4;
+}
+
+.prose code {
+  @apply text-gray-800 bg-gray-50 px-1 py-0.5 rounded;
 }

@@ -1,0 +1,115 @@
+
+## Next.js App Router Guidelines
+
+### Folder Structure
+
+- **`app/`**: Main application directory using the App Router.
+    - **`api/`**: Contains all API route handlers.
+    - **`components/`**: Reusable React components.
+    - **`hooks/`**: Custom React hooks.
+    - **`styles/`**: Global and layout-specific styles.
+    - **`lib/`**: Utility functions and libraries.
+    - **`public/`**: Static assets like images, fonts, and other public files.
+
+### API Routes
+
+- **Location**: Place all API route files within the `app/api/` directory.
+- **Structure**:
+    - Each API route should reside in its own subdirectory named after the endpoint.
+    - Use `route.js` or `route.ts` files to define the HTTP methods (GET, POST, etc.).
+- **Best Practices**:
+    - Follow RESTful API design principles.
+    - Validate and sanitize all incoming data.
+    - Handle errors gracefully and return appropriate HTTP status codes.
+
+### Components
+
+- **Location**: Store all reusable components in the `app/components/` directory.
+- **Organization**:
+    - Group components by feature or functionality.
+    - Use subdirectories for complex or related components.
+- **Naming Conventions**:
+    - Use PascalCase for component filenames (e.g., `Navbar.jsx`).
+    - Prefix component names appropriately to indicate their purpose.
+
+### Hooks
+
+- **Location**: Place custom hooks in the `app/hooks/` directory.
+- **Naming Conventions**:
+    - Prefix custom hooks with `use` (e.g., `useAuth`).
+- **Best Practices**:
+    - Ensure hooks are reusable and encapsulate related logic.
+    - Keep hooks focused on a single responsibility.
+
+### Styles
+
+- **Location**: Manage styles in the `app/styles/` directory.
+- **Approach**:
+    - Use CSS Modules for component-scoped styling.
+    - Define global styles in `globals.css` or equivalent.
+    - Consider using CSS-in-JS solutions like Styled Components if preferred.
+- **Naming Conventions**:
+    - Use descriptive class names.
+    - Follow a consistent naming pattern for easier maintenance.
+
+### Utility Functions
+
+- **Location**: Store utility functions in the `app/lib/` directory.
+- **Organization**:
+    - Group related utilities into subdirectories or files.
+- **Best Practices**:
+    - Write pure functions to ensure predictability and testability.
+    - Document utility functions for clarity and ease of use.
+
+### Public Assets
+
+- **Location**: Place all static assets in the `public/` directory.
+- **Usage**:
+    - Reference assets using absolute paths (e.g., `/images/logo.png`).
+    - Optimize images and other media for performance.
+
+### Routing
+
+- **App Router**: Utilize Next.js App Router for defining routes.
+    - Structure routes based on the directory hierarchy within `app/`.
+    - Leverage nested layouts for shared UI components and state.
+
+### Data Fetching
+
+- **Server Components**: Use server-side rendering for data-intensive components.
+- **Client Components**: Utilize client-side rendering for interactive elements.
+- **API Integration**:
+    - Fetch data from API routes using `fetch` or a preferred HTTP client.
+    - Handle loading and error states gracefully in the UI.
+
+### State Management
+
+- **Approach**: Choose a state management solution that fits the application's complexity.
+    - Options include React Context, Redux, Zustand, or others.
+- **Best Practices**:
+    - Keep the global state minimal and relevant.
+    - Avoid unnecessary re-renders by optimizing state selectors.
+
+### Testing
+
+- **Location**: Place tests alongside components or in a separate `tests/` directory.
+- **Tools**: Use testing libraries like Jest and React Testing Library.
+- **Best Practices**:
+    - Write unit tests for individual components and functions.
+    - Implement integration tests for API routes and complex interactions.
+
+### Deployment
+
+- **Preparation**:
+    - Ensure environment variables are properly configured.
+    - Optimize the build for production using `next build`.
+- **Platforms**: Deploy on platforms that support Next.js, such as Vercel, Netlify, or AWS.
+- **Monitoring**:
+    - Set up logging and monitoring to track application performance and errors.
+
+### Miscellaneous
+
+- **Version Control**: Use Git for version control, following a consistent branching strategy.
+- **Code Formatting**: Enforce code consistency using tools like Prettier and ESLint.
+- **Documentation**: Maintain up-to-date documentation for developers and stakeholders.
+
