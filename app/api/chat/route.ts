@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { prisma } from '@/app/lib/db'
 import { OCRResult } from '@/app/types'
 
-const LANGFLOW_API_URL = 'https://api.langflow.astra.datastax.com/lf/0586a787-50ae-4a4e-aebe-866cf022aa5b/api/v1/run/72702e43-2772-46ab-a39d-2af8fb14c2b0'
+const LANGFLOW_API_URL = process.env.LANGFLOW_URL
 const LANGFLOW_API_KEY = process.env.LANGFLOW_API_KEY
 
 export async function POST(request: Request) {

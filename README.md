@@ -51,11 +51,12 @@ Follow these steps to set up and run the project locally.
    DATABASE_URL="file:./prisma/dev.db"
    OPENAI_API_KEY="your-openai-api-key"
    LANGFLOW_API_KEY="your-langflow-api-key"
+   LANGFLOW_URL="your-langflow-url"
    ```
 
    - **`OPENAI_API_KEY`**: Obtain from [OpenAI](https://openai.com).
    - **`LANGFLOW_API_KEY`**: Obtain from [Astra Datastax](https://astra.datastax.com/), free to use.
-
+   - **`LANGFLOW_URL`**: Obtain from [Astra Datastax](https://astra.datastax.com/), free to use.
 ### Running the Development Server
 
 Start the development server:
